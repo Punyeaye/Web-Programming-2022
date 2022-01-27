@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Chat</title>
+    <style>
+        body {
+            padding: 2em;
+        }
+
+        #cetak {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+            margin-bottom: 1rem;
+            overflow: auto;
+        }
+
+        #masukan {
+            width: 445px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Chatting Cheating :)</h2>
+    <div id="cetak"></div>
+    <div id="container">
+        <input id="masukan" type="text" placeholder="Ketik disini" onchange="proses()">
+        <button onclick="proses()" id="btn">Kirim</button>
+    </div>
+
+
+    <script>
+        const masukan = document.getElementById("masukan");
+        const btn = document.getElementById("btn");
+        let cetak = document.getElementById("cetak");
+        let penampung = ""
+
+        function proses() {
+            cetak.innerHTML = cetak.innerHTML + "<br>" + masukan.value;
+            masukan.value = ""
+        }
+    </script>
+</body>
+
+</html>

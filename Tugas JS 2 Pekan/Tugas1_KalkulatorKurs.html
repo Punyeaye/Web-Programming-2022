@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Tugas 1</title>
+
+    <script>
+        function hasil() {
+            let input = parseInt(document.getElementById("input").value);
+            let valas = parseInt(document.getElementById("valas").value);
+            let output = input * valas;
+            document.getElementById("output").value = output;
+            console.log(output);
+        }
+    </script>
+</head>
+
+<body>
+    <table border="1" cellpadding="1" cellspacing="1">
+        <tr>
+            <th>Masukkan Nilai</th>
+            <th>Valas</th>
+            <th>Nilai Rupiah</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="input"></td>
+            <td>
+                <select id="valas" onchange="hasil()">
+                    <option value="">Pilih Valas</option>
+                    <option value="9915">1 Dolar US</option>
+                    <option value="13472">1 Dollar Singapore</option>
+                    <option value="874">1 Ringgit Malalysia</option>
+                    <option value="120">1 Yen Japan</option>
+                    <option value="1588">1 Euro</option>
+                    <option value="3952">1 Riyal Arab Saudi</option>
+                </select>
+            </td>
+            <td><input type="text" id="output" readonly="readonly"></td>
+        </tr>
+    </table>
+</body>
+
+</html>
